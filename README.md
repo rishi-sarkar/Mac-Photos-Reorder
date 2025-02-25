@@ -40,22 +40,24 @@ Place all the images you want to reorder into a folder named **`photos`** inside
 >
 > ```
 > /Mac-Photos-Reorganizer/
-> ├── rename.py
-> ├── reverse.py
+> ├── step1-rename.py
+> ├── step2-reverse.py
 > ├── photos/
 > │   ├── IMG_1234.JPG
 > │   ├── IMG_5678.JPG
 > │   ├── IMG_9101.JPG
 > ```
-![s13563702252025](https://a.okmd.dev/md/67be1267d7755.png)
+
+<img src="dev/readme-images/Step1.png" alt="Step 1" width="500">
+
 ---
 
 ### Step 2️⃣: Rename Files
 
-Run `rename.py` to rename all files inside the **photos** folder to a sequential order (1, 2, 3, ...).
+Run `step1-rename.py` to rename all files inside the **photos** folder to a sequential order (1, 2, 3, ...).
 
 ```sh
-python rename.py
+python step1-rename.py
 ```
 
 This will:
@@ -63,7 +65,7 @@ This will:
 - Rename all files to numbers (`1.jpg`, `2.jpg`, `3.jpg`, ...).
 - Create a text file storing the original names (DO NOT DELETE THIS FILE).
 
-🖼️ _(Insert image here showing renamed files in Finder)_
+<img src="dev/readme-images/Step2.png" alt="Step 2" width="500">
 
 ---
 
@@ -74,16 +76,16 @@ This will:
 
 Now, your files are arranged in chronological order.
 
-🖼️ _(Insert image here showing Finder cleanup option)_
+<img src="dev/readme-images/Step3.png" alt="Step 3" width="500">
 
 ---
 
 ### Step 4️⃣: Restore Original Names
 
-Run `reverse.py` to revert the files to their original names.
+Run `step2-reverse.py` to revert the files to their original names.
 
 ```sh
-python reverse.py
+python step2-reverse.py
 ```
 
 This will:
@@ -91,7 +93,7 @@ This will:
 - Restore the original filenames.
 - Delete the additional text file.
 
-🖼️ _(Insert image here showing filenames restored)_
+<img src="dev/readme-images/Step4.png" alt="Step 4" width="500">
 
 ---
 
@@ -135,22 +137,22 @@ If you're not familiar with coding, follow these simple steps to use this tool:
 4. **Run the scripts**
    - Type the following command to rename files:
      ```sh
-     python rename.py
+     python step1-rename.py
      ```
    - Go to the 'photos' folder and then right-click. Press **'Clean Up By -> Name'**.
    - Once sorted in Finder, restore filenames by running:
      ```sh
-     python reverse.py
+     python step2-reverse.py
      ```
 5. **Drag the folder into your desired location**
    - Do not select all images and drag them since it will distort the order
      ```sh
-     python rename.py
+     python step1-rename.py
      ```
    - Go to the 'photos' folder and then right-click. Press **'Clean Up By -> Name'**.
    - Once sorted in Finder, restore filenames by running:
      ```sh
-     python reverse.py
+     python step2-reverse.py
      ```
 
 Now your photos are organized correctly!
@@ -172,18 +174,18 @@ cd /path/to/Mac-Photos-Reorganizer
 Run the scripts:
 
 ```sh
-python rename.py
+python step1-rename.py
 ```
 
 ```sh
-python reverse.py
+python step2-reverse.py
 ```
 
 ---
 
 ## Notes 📌
 
-- Do **NOT** delete the `.txt` file created by `rename.py` before running `reverse.py`.
+- Do **NOT** delete the `.txt` file created by `step1-rename.py` before running `step2-reverse.py`.
 - Works with **any file type**.
 - If any issues arise, ensure all files in `photos/` have valid timestamps.
 
