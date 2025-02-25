@@ -1,7 +1,7 @@
 import os
 
 def rename():
-    directory = "./change"  # Folder containing files to rename
+    directory = "./photos"  # Folder containing files to rename
     try:
         # Get all files sorted by creation time (st_birthtime) in reverse order (newest first)
         files = sorted(
@@ -9,7 +9,7 @@ def rename():
             key=lambda x: os.stat(os.path.join(directory, x)).st_birthtime)
 
         if not files:
-            print("No files found in the 'change' folder.")
+            print("No files found in the 'photos' folder.")
             return
 
         mapping_file = os.path.join(directory, "file_mapping.txt")
