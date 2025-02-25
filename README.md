@@ -47,7 +47,7 @@ Place all the images you want to reorder into a folder named **`photos`** inside
 > │   ├── IMG_5678.JPG
 > │   ├── IMG_9101.JPG
 > ```
-
+![s13483702252025](https://a.okmd.dev/md/67be1087ee59e.png)
 ---
 
 ### Step 2️⃣: Rename Files
